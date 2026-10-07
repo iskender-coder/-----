@@ -1,0 +1,261 @@
+/* ===== ЖАЛПЫ СТИЛДЕР ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===== БАШКЫ МЕНЮ (HEADER) ===== */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    color: #e0e7ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-container a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== БАШКЫ БӨЛҮК (HERO) ===== */
+.hero {
+    background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(42, 82, 152, 0.85)), 
+                url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* ===== НЕГИЗГИ КОНТЕЙНЕР ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== СЕКЦИЯЛАР ===== */
+section {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+section h2 {
+    color: #1e3c72;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #2a5298;
+    display: inline-block;
+}
+
+section h3 {
+    color: #d35400;
+    margin: 25px 0 15px;
+    font-size: 1.25rem;
+}
+
+section p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #4a5568;
+    text-align: justify;
+}
+
+/* ===== КАРТОЧКАЛАР (GRID) ===== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 25px;
+    border-left: 5px solid #2a5298;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(42, 82, 152, 0.15);
+}
+
+.card.warning {
+    border-left-color: #e67e22;
+    background: #fffaf5;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    font-size: 0.98rem;
+    color: #4a5568;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+.card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+.card.warning ul li::before {
+    content: "⚠";
+    color: #e67e22;
+}
+
+/* ===== МААЛЫМАТ КУТУЧАЛАРЫ ===== */
+.info-box {
+    background-color: #e8f4fd;
+    border-left: 6px solid #3498db;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    font-size: 1rem;
+}
+
+.info-box strong {
+    color: #1e3c72;
+}
+
+/* ===== КОРУТУНДУ ===== */
+footer {
+    background-color: #1e3c72;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ===== МОБИЛДИК ЫЛАЙЫКТАШТЫРУУ ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 25px 20px;
+    }
+    
+    .nav-container a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+.dan {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f2f2f2;
+    padding-top: 100px;
+}
+
+details {
+    display: inline-block;
+}
+
+summary {
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    list-style: none;
+}
+
+summary:hover {
+    background: #333;
+}
+
+.data-box {
+    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
